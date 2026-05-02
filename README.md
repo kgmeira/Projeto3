@@ -1,4 +1,5 @@
 # Projeto3
+Nomes: Guilherme Luis de Souza Meira RGM: 48075566, Davi Rosa de Jesus RGM: 479694294
 
 # README – Exercícios de Estruturas de Dados em Python
 
