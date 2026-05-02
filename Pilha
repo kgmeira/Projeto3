@@ -1,0 +1,39 @@
+pilha = []
+
+while True:
+    print("\n--- Editor de Texto ---")
+    print("1 - Digitar palavra")
+    print("2 - Desfazer última palavra")
+    print("3 - Mostrar texto")
+    print("4 - Sair")
+    
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        palavra = input("Digite a palavra: ").lower()
+        pilha.append(palavra)
+
+    elif opcao == "2":
+        if len(pilha) > 0:
+            removido = pilha.pop()
+            print("Palavra removida:", removido)
+        else:
+            print("Nada para desfazer!")
+
+    elif opcao == "3":
+        if len(pilha) > 0:
+            print("Texto atual:", end=" ")
+            
+            for palavra in pilha:
+                print(palavra, end=" ")
+            
+            print()  # quebra de linha
+        else:
+            print("Texto vazio!")
+
+    elif opcao == "4":
+        print("Encerrando o programa...")
+        break
+
+    else:
+        print("Opção inválida! Tente novamente.")
