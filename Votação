@@ -1,0 +1,52 @@
+votos = []
+
+# Entrada de votos
+while True:
+    voto = input("Digite o voto (Ana, Bruno, Carlos ou 'fim'): ").lower()
+    
+    if voto == "fim":
+        break
+    
+    if voto == "ana" or voto == "bruno" or voto == "carlos":
+        votos.append(voto)
+    else:
+        print("Candidato inválido! Tente novamente.")
+
+# Contagem dos votos
+ana = votos.count("ana")
+bruno = votos.count("bruno")
+carlos = votos.count("carlos")
+
+# Mostrar resultados
+print("\nResultado da votação:")
+print("Ana:", ana)
+print("Bruno:", bruno)
+print("Carlos:", carlos)
+
+# Descobrir o maior valor 
+if ana >= bruno and ana >= carlos:
+    maior = ana
+elif bruno >= ana and bruno >= carlos:
+    maior = bruno
+else:
+    maior = carlos
+
+# Verificar vencedores
+vencedores = []
+
+if ana == maior:
+    vencedores.append("Ana")
+if bruno == maior:
+    vencedores.append("Bruno")
+if carlos == maior:
+    vencedores.append("Carlos")
+
+# Resultado final
+print("\nResultado final:")
+
+if len(vencedores) == 1:
+    print("Vencedor:", vencedores[0])
+elif len(vencedores) == 2:
+    print("Empate entre:", vencedores[0], "e", vencedores[1])
+else:
+    print("Empate entre todos os candidatos")
